@@ -1,0 +1,14 @@
+<form action="/articles/<%= @article.id %>" method="POST">
+  <!--must include:-->
+  <input id="hidden" type="hidden" name="_method" value="PATCH">
+  
+  <!--displays the existing object in the edit form-->
+  <!--saves edits to an article-->
+  <!--submits the form via a patch request-->
+  <label>Article Title: </label>
+  <input id="title" type="text" name="article[title]" value="<%= @article.title %>">
+  <label>Article Content: </label>
+  <input id="content" type="text" name="article[content]" value="<%= @article.content %>">
+  <button type="submit">Submit</button>
+  
+</form>

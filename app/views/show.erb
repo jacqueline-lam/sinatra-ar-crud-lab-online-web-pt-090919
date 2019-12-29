@@ -1,0 +1,10 @@
+<h1>Display Article:</h1>
+<!--show page displays the article's title and content-->
+<h2>Article Title: <%= @article.title %></h2>
+<h2>Article Content:<%= @article.content %></h2>
+
+<!--add a "delete" button to the show page-->
+<form action="/articles/<%= @article.id %>" method="POST">
+  <input id="hidden" type="hidden" name="_method" value="DELETE">
+  <button type="submit">Delete</button>
+</form>

@@ -1,4 +1,3 @@
-#Placeholder for a model
-
+# Placeholder for a model
 class Article < ActiveRecord::Base
 end

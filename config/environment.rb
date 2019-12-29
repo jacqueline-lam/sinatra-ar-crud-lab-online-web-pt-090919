@@ -11,6 +11,7 @@ def fi_check_migration
   end
 end
 
+# Establish connection to database
 ActiveRecord::Base.establish_connection(
   :adapter => "sqlite3",
   :database => "db/#{ENV['SINATRA_ENV']}.sqlite"

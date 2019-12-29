@@ -1,0 +1,13 @@
+<!--Displat all articles-->
+<!--iterate over @articles and render them on the page-->
+
+<% @articles.each do |article| %>
+  <h1><%= article.title %></h1>
+  <p><%= article.content %></p>
+  
+  <form action="/articles/<%= article.id %>/edit">
+    <button type="submit">Edit</button>
+  </form>
+  
+  <a href="/articles/<%= article.id %>"><button>Details/Show</button></a>
+<% end %>
